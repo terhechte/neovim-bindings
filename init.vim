@@ -1,6 +1,6 @@
-if has("mouse")
-  set mouse=a
-endif
+#if has("mouse")
+#  set mouse=a
+#endif
 
 source ~/.config/nvim/emacs.vim
 
