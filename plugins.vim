@@ -9,4 +9,9 @@ Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+Plug 't9md/vim-choosewin'
+nmap - <Plug>(choosewin)
+
+let g:choosewin_overlay_enable = 1
+
 call plug#end()
