@@ -5,3 +5,6 @@ That's what you get here.
 Install plugins via
 
 :PlugInstall
+
+If wanting to use rust projects, run this after all plugins are installed:
+:CocInstall coc-rls

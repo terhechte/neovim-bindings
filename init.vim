@@ -13,8 +13,20 @@ source ~/.config/nvim/rust.vim
 " Auto switch to directory of edited file like emacs
 set autochdir
 
-color zellner 
+color default 
+
+set relativenumber
 
 let mapleader = ","
 map <leader>nt tabn
 
+" Close the current file but keep the split open
+map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
+
+
+" UNDO
+" Instruct vim to save 1000 undo items in a persistent undo file.
+" We also want each undo file to be stored in the same directory.
+set undolevels=1000
+set undofile
+set undodir=~/.config/nvim/undodir
