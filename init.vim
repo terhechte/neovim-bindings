@@ -13,7 +13,7 @@ source ~/.config/nvim/rust.vim
 " Auto switch to directory of edited file like emacs
 set autochdir
 
-color default 
+" color default 
 
 set relativenumber
 
@@ -30,3 +30,6 @@ map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
 set undolevels=1000
 set undofile
 set undodir=~/.config/nvim/undodir
+
+
+colorscheme challenger_deep
