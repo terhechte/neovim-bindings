@@ -9,6 +9,8 @@ imap <C-a> <C-o>:call <SID>home()<CR>
 imap <C-e> <End>
 imap <C-d> <Del>
 imap <C-h> <BS>
+imap ∫ <C-left>
+imap ƒ <C-o>e<Right>
 imap <C-k> <C-r>=<SID>kill_line()<CR>
 imap <M-BS> <C-W>
 

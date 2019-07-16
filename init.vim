@@ -30,3 +30,8 @@ map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
 set undolevels=1000
 set undofile
 set undodir=~/.config/nvim/undodir
+
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
