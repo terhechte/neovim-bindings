@@ -2,6 +2,8 @@
 "   set mouse=a
 " endif
 "
+let mapleader = ","
+
 source ~/.config/nvim/plugins.vim
 
 source ~/.config/nvim/emacs.vim
@@ -17,7 +19,6 @@ set autochdir
 
 set relativenumber
 
-let mapleader = ","
 map <leader>nt tabn
 
 " Close the current file but keep the split open

@@ -12,14 +12,16 @@ Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 't9md/vim-choosewin'
+
+" Plug 'philip-karlsson/aerojump.nvim', { 'do': ':UpdateRemotePlugins' }
+call plug#end()
+
 nmap - <Plug>(choosewin)
 
-Plug 'philip-karlsson/aerojump.nvim', { 'do': ':UpdateRemotePlugins' }
-nmap <Leader>as <Plug>(AerojumpSpace)
-nmap <Leader>ab <Plug>(AerojumpBolt)
-nmap <Leader>aa <Plug>(AerojumpFromCursorBolt)
-nmap <Leader>ad <Plug>(AerojumpDefault) " Boring mode
+" nmap <Leader>as <Plug>(AerojumpSpace)
+" nmap <Leader>ab <Plug>(AerojumpBolt)
+" nmap <Leader>aa <Plug>(AerojumpFromCursorBolt)
+" nmap <Leader>ad <Plug>(AerojumpDefault) " Boring mode
 
 let g:choosewin_overlay_enable = 0
 let g:choosewin_statusline_replace = 1
-call plug#end()
