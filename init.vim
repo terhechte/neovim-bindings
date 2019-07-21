@@ -1,16 +1,15 @@
 let mapleader = ","
 
-source ./plugins.vim
-
-source ./helpers.vim
-
-source ./configure_emacs.vim
-
-source ./configure_terminal.vim
-
-source ./configure_rust.vim
-
-source ./configure_fzf.vim
+" Load plugins
+source ~/.config/nvim/plugins.vim
+" Helper Scripts
+source ~/.config/nvim/helpers.vim
+" Configure Emacs keybindings
+source ~/.config/nvim/configure_emacs.vim
+" Configure the terminal emulator
+source ~/.config/nvim/configure_terminal.vim
+" Configure fzf
+source ~/.config/nvim/configure_fzf.vim
 
 " Auto switch to directory of edited file like emacs
 set autochdir
