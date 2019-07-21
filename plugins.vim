@@ -5,26 +5,24 @@ call plug#begin('~/.config/nvim/plugins')
 " Rust
 Plug 'w0rp/ale'
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+
+" It seems, with coc, vim-racer is not needed
 " Plug 'racer-rust/vim-racer', { 'for': 'rust' }
-
-Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
-
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" Challenger theme has nice colors
+Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+
+" Choosewin allows quick window navigation
 Plug 't9md/vim-choosewin'
 
+" fzf for finding files and searching files in repositories (and more)
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 
-" Plug 'philip-karlsson/aerojump.nvim', { 'do': ':UpdateRemotePlugins' }
 call plug#end()
 
 nmap - <Plug>(choosewin)
-
-" nmap <Leader>as <Plug>(AerojumpSpace)
-" nmap <Leader>ab <Plug>(AerojumpBolt)
-" nmap <Leader>aa <Plug>(AerojumpFromCursorBolt)
-" nmap <Leader>ad <Plug>(AerojumpDefault) " Boring mode
 
 let g:choosewin_overlay_enable = 0
 let g:choosewin_statusline_replace = 1

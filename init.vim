@@ -1,38 +1,38 @@
- if has("mouse")
-   set mouse=a
- endif
-
 let mapleader = ","
 
-source ~/.config/nvim/plugins.vim
+source ./plugins.vim
 
-source ~/.config/nvim/emacs.vim
+source ./helpers.vim
 
-source ~/.config/nvim/terminal.vim
+source ./configure_emacs.vim
 
-source ~/.config/nvim/rust.vim
+source ./configure_terminal.vim
 
-source ~/.config/nvim/fzf.vim
+source ./configure_rust.vim
+
+source ./configure_fzf.vim
 
 " Auto switch to directory of edited file like emacs
 set autochdir
 
-" color default 
-
+" Relative line numbering by default
 set relativenumber
 
-map <leader>nt tabn
-
-" Close the current file but keep the split open
+" Close the current file but keep the split/window open
 map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
 
-
-" UNDO
+" Undo
 " Instruct vim to save 1000 undo items in a persistent undo file.
 " We also want each undo file to be stored in the same directory.
 set undolevels=1000
 set undofile
-set undodir=~/.config/nvim/undodir
+set undodir=./undodir
 
-
+" challenger is a nice theme
 colorscheme challenger_deep
+ 
+" If possible, we'd like to have mouse support
+if has("mouse")
+   set mouse=a
+ endif
+
