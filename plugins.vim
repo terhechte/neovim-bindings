@@ -13,6 +13,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 't9md/vim-choosewin'
 
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+
 " Plug 'philip-karlsson/aerojump.nvim', { 'do': ':UpdateRemotePlugins' }
 call plug#end()
 
@@ -25,3 +28,5 @@ nmap - <Plug>(choosewin)
 
 let g:choosewin_overlay_enable = 0
 let g:choosewin_statusline_replace = 1
+
+

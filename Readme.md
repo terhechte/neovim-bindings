@@ -14,4 +14,13 @@ Install plugins via
 If wanting to use rust projects, run this after all plugins are installed:
 :CocInstall coc-rls
 
+# Searching
+- Requires fzf and ripgrep:
 
+```
+brew install ripgrep
+brew install fzf
+```
+,f => search for file in repo directories
+,s => search in files in repo directories
+FIMXE: search only in specific file types

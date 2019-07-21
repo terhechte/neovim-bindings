@@ -1,7 +1,7 @@
-" if has("mouse")
-"   set mouse=a
-" endif
-"
+ if has("mouse")
+   set mouse=a
+ endif
+
 let mapleader = ","
 
 source ~/.config/nvim/plugins.vim
@@ -11,6 +11,8 @@ source ~/.config/nvim/emacs.vim
 source ~/.config/nvim/terminal.vim
 
 source ~/.config/nvim/rust.vim
+
+source ~/.config/nvim/fzf.vim
 
 " Auto switch to directory of edited file like emacs
 set autochdir
