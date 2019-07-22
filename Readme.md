@@ -18,6 +18,10 @@ Install plugins via
 `:PlugInstall`
 Then restart.
 
+# General
+
+- `,S` => Session dialog for storing the current session. Load via `nvim -S name-of-sessions.vim`
+
 # Rust
 
 If wanting to use rust projects, run this after all plugins are installed:

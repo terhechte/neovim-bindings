@@ -1,5 +1,12 @@
 let mapleader = ","
 
+" Create backup directories if they don't exist yet
+if !isdirectory("~/.config/nvim/.tmp")
+    call mkdir("~/.config/nvim/.tmp/backup", "p")
+    call mkdir("~/.config/nvim/.tmp/undodir", "p")
+    call mkdir("~/.config/nvim/.tmp/swap", "p")
+endif
+
 " Load plugins
 source ~/.config/nvim/plugins.vim
 " Helper Scripts
@@ -25,7 +32,14 @@ map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
 " We also want each undo file to be stored in the same directory.
 set undolevels=1000
 set undofile
-set undodir=~/.config/nvim/undodir
+
+" Store all temporary files in one hidden directory
+set undodir=~/.config/nvim/.tmp/undodir "undo
+set backupdir=~/.config/nvim/.tmp/backup "backup file
+set directory=~/.config/nvim/.tmp/swap "swap files
+
+" Convenience for sessions
+map <leader>S :mks ~/.config/nvim/sessions/
 
 set tabstop=2
 set shiftwidth=2
