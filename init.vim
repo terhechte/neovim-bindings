@@ -1,10 +1,10 @@
 let mapleader = ","
 
 " Create backup directories if they don't exist yet
-if !isdirectory("~/.config/nvim/.tmp")
-    call mkdir("~/.config/nvim/.tmp/backup", "p")
-    call mkdir("~/.config/nvim/.tmp/undodir", "p")
-    call mkdir("~/.config/nvim/.tmp/swap", "p")
+if !isdirectory(resolve(expand("~/.config/nvim/.tmp")))
+    call mkdir(resolve(expand("~/.config/nvim/.tmp/backup", "p")))
+    call mkdir(resolve(expand("~/.config/nvim/.tmp/undodir", "p")))
+    call mkdir(resolve(expand("~/.config/nvim/.tmp/swap", "p")))
 endif
 
 " Load plugins
