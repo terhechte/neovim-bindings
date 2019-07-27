@@ -18,6 +18,11 @@ Install plugins via
 `:PlugInstall`
 Then restart.
 
+# Coc/Node
+coc (completions for lots of things) requires node. so..
+
+`brew install nodejs`
+
 # General
 
 - `,S` => Session dialog for storing the current session. Load via `nvim -S name-of-sessions.vim`
