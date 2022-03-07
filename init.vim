@@ -16,7 +16,11 @@ source ~/.config/nvim/configure_emacs.vim
 " Configure the terminal emulator
 source ~/.config/nvim/configure_terminal.vim
 " Configure fzf
-source ~/.config/nvim/configure_fzf.vim
+"source ~/.config/nvim/configure_fzf.vim
+" Configure Rust
+source ~/.config/nvim/rust.vim
+" Configure telescope
+source ~/.config/nvim/configure_telescope.vim
 
 " Auto switch to directory of edited file like emacs
 set autochdir
