@@ -7,8 +7,12 @@ if !isdirectory(resolve(expand("~/.config/nvim/.tmp")))
     call mkdir(resolve(expand("~/.config/nvim/.tmp/swap", "p")))
 endif
 
+set termguicolors
+
 " Load plugins
 source ~/.config/nvim/plugins.vim
+" Does another package manager work?
+luafile ~/.config/nvim/plugins.lua
 " Helper Scripts
 source ~/.config/nvim/helpers.vim
 " Configure Emacs keybindings
@@ -21,6 +25,37 @@ source ~/.config/nvim/configure_terminal.vim
 source ~/.config/nvim/rust.vim
 " Configure telescope
 source ~/.config/nvim/configure_telescope.vim
+" Configure legendary
+luafile ~/.config/nvim/configure_legendary.lua
+" Configure matchup to use treesitter
+luafile ~/.config/nvim/configure_matchup.lua
+" NerdTree defaults
+luafile ~/.config/nvim/configure_nerdtree.lua
+" Neoscroll
+"lua require('neoscroll').setup()
+
+lua require("bufferline").setup{}
+
+lua require('feline').setup()
+
+lua require('nvim-autopairs').setup{}
+
+lua require("toggleterm").setup{}
+
+lua require"gitlinker".setup()
+
+source ~/.config/nvim/custom_conmenu.vim
+
+luafile ~/.config/nvim/configure_gitsigns.lua
+
+" Shade doesn't work in neovide. disable for now
+" luafile ~/.config/nvim/configure_shade.lua
+
+" Remember last edit place on save
+luafile ~/.config/nvim/configure_lastplace.lua
+
+" Does this work?
+luafile ~/.config/nvim/configure_cosmic.lua
 
 " Auto switch to directory of edited file like emacs
 set autochdir
@@ -43,18 +78,41 @@ set backupdir=~/.config/nvim/.tmp/backup "backup file
 set directory=~/.config/nvim/.tmp/swap "swap files
 
 " Convenience for sessions
-map <leader>S :mks ~/.config/nvim/sessions/
+" map <leader>S :mks ~/.config/nvim/sessions/
 
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
 
+" Show lightbulb for code actions
+autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()
+
+" Guifont
+set guifont=Lekton\ Nerd\ Font\ Mono:h12
+
+
 " challenger is a nice theme
-colorscheme challenger_deep
+"colorscheme challenger_deep
+colorscheme aurora
+
+luafile ~/.config/nvim/lua_init.lua
+
+" Move somewhere, document
+nnoremap gpd <cmd>lua require('goto-preview').goto_preview_definition()<CR>
+nnoremap gpi <cmd>lua require('goto-preview').goto_preview_implementation()<CR>
+nnoremap gP <cmd>lua require('goto-preview').close_all_win()<CR>
+" Only set if you have telescope installed
+nnoremap gpr <cmd>lua require('goto-preview').goto_preview_references()<CR>
+
+" For the custom menu
+" Map <leader>m to open default menu.
+noremap <silent> <leader>m :ConMenu<CR>
+
+
+
  
 " If possible, we'd like to have mouse support
 if has("mouse")
    set mouse=a
  endif
-
