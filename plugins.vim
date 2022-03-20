@@ -98,7 +98,11 @@ Plug 'folke/todo-comments.nvim'
 Plug 'akinsho/bufferline.nvim'
 
 " Statusbar
-Plug 'feline-nvim/feline.nvim', { 'branch': 'develop' }
+" Plug 'feline-nvim/feline.nvim', { 'branch': 'develop' }
+Plug 'nvim-lualine/lualine.nvim'
+
+" tokyonight coloorscheme
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 " Autopairs
 Plug 'windwp/nvim-autopairs'

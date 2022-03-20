@@ -36,7 +36,8 @@ luafile ~/.config/nvim/configure_nerdtree.lua
 
 lua require("bufferline").setup{}
 
-lua require('feline').setup()
+" lua require('feline').setup()
+luafile ~/.config/nvim/configure_lualine.lua
 
 lua require('nvim-autopairs').setup{}
 
@@ -92,9 +93,11 @@ autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()
 set guifont=Lekton\ Nerd\ Font\ Mono:h12
 
 
-" challenger is a nice theme
-"colorscheme challenger_deep
-colorscheme aurora
+" colorscheme aurora
+let g:tokyonight_style = "night"
+let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
+colorscheme tokyonight
+
 
 luafile ~/.config/nvim/lua_init.lua
 
@@ -110,6 +113,8 @@ nnoremap gpr <cmd>lua require('goto-preview').goto_preview_references()<CR>
 noremap <silent> <leader>m :ConMenu<CR>
 
 
+" Use ,c to copy to the macos clipboard
+noremap <leader>c "+y<CR>gv
 
  
 " If possible, we'd like to have mouse support
