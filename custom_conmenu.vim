@@ -38,7 +38,7 @@ let g:conmenu#default_menu = [
   \['  Delete All Marks', ':delmarks A-Z0-9a-z'],
   \['  Configs', [
     \[' neovim', ':e ~/.config/nvim/init.vim'],
-    \[' fish', ':e ~/.config/fish/init.fish'],
+    \[' fish', ':e ~/.config/fish/config.fish'],
     \]],
   \['────────────────────────────'],
   \['  Buffer in Finder', ':silent exec "!open %:p:h"'],
