@@ -8,7 +8,7 @@ require('legendary').setup({
     -- Legendary itself is mapped to `<leader>e`
     -- copy to macos clipboard itself is mapped to `<leader>c`
     -- close buffer is mapped to <leader>q
-    -- rename file is mapped to <leader>rn
+    -- rename file is mapped to <leader>rn ??
     -- get github link for current location file is mapped to <leader>gy
     { '<leader>g', ':Neogit<CR>', description = 'Open Neogit', opts = {} },
     { '<leader>s', ':wa<CR>', description = 'Write all buffers', opts = {} },
@@ -21,7 +21,10 @@ require('legendary').setup({
     { '<leader>fg', ':Telescope live_grep<CR>', description = 'Grep Files' },
     { '<leader>fb', ':Telescope buffers<CR>', description = 'Search Buffers' },
     { '<leader>fc', ':Telescope commands<CR>', description = 'Search commands' },
-    { '<leader>flr', ':Telescope lsp_references<CR>', description = 'Search references' },
+    { '<leader>flr', ':lua vim.lsp.buf.references()<CR>', description = 'Search references' },
+    { '<leader>fli', ':lua vim.lsp.buf.implementation()<CR>', description = 'Go to implementation' },
+    { '<leader>fld', ':lua vim.lsp.buf.definition()<CR>', description = 'Go to definition' },
+    { '<leader>flt', ':lua vim.lsp.buf.type_definition()<CR>', description = 'Go to type definition' },
     { '<leader>fhc', ':Telescope command_history<CR>', description = 'Search command history' },
     { '<leader>fhs', ':Telescope search_history<CR>', description = 'Search search history' },
     { '<leader>fs', ':Telescope<CR>', description = 'Search Telescope' },
@@ -35,6 +38,8 @@ require('legendary').setup({
     { '<leader>dx', ':TroubleToggle<CR>', description = 'Toggle Diagnostics' },
     { '<leader>dw', ':TroubleToggle workspace_diagnostics<CR>', description = 'Toggle Workspace Diagnostics' },
     { '<leader>dd', ':TroubleToggle document_diagnostics<CR>', description = 'Toggle Document Diagnostics' },
+    { '<leader>rn', ':RustCodeAction<CR>', description = 'Run Rust Code Action' },
+    { '<leader>xq', ':cclose<CR>', description = 'Close quickfix list' },
     --{ '<leader>gn', require("cosmic-ui").rename(), description = 'Rename' },
     --{ '<leader>ga', require("cosmic-ui").code_actions(), description = ' Code Actions' },
     --{ '<leader>gb', require("cosmic-ui").range_code_actions(), description = 'Range Code Actions' },

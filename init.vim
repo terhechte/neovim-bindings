@@ -21,6 +21,7 @@ source ~/.config/nvim/configure_emacs.vim
 source ~/.config/nvim/configure_terminal.vim
 " Configure fzf
 "source ~/.config/nvim/configure_fzf.vim
+lua vim.lsp.set_log_level("debug")
 " Configure Rust
 source ~/.config/nvim/rust.vim
 " Configure telescope
@@ -128,6 +129,8 @@ noremap <leader>c "+y<CR>gv
 
 " Map legendary
 noremap <silent> <leader>e :Legendary<CR>
+
+nnoremap <silent> gd    <cmd>lua vim.lsp.buf.definition()<CR>
 
 " If possible, we'd like to have mouse support
 if has("mouse")
