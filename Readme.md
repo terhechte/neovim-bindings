@@ -174,3 +174,9 @@ Legendary:
 Still needs to be set up
 https://github.com/mrjones2014/legendary.nvim
 
+
+# Open Questions
+
+- [ ] how do I see all the errors in the project
+- [ ] how do I rename
+- [ ] 

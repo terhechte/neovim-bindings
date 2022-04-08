@@ -36,6 +36,13 @@ luafile ~/.config/nvim/configure_nerdtree.lua
 
 lua require("bufferline").setup{}
 
+" Show diagnostics in a list
+lua require('trouble').setup()
+" noremap <silent> <leader>e :Legendary<CR>
+
+autocmd BufWritePre *.rs lua vim.lsp.buf.formatting_sync(nil, 200)
+
+
 " lua require('feline').setup()
 luafile ~/.config/nvim/configure_lualine.lua
 
@@ -101,22 +108,27 @@ colorscheme tokyonight
 
 luafile ~/.config/nvim/lua_init.lua
 
+" Try outsave
+let g:rustfmt_autosave = 1
+
 " Move somewhere, document
-nnoremap gpd <cmd>lua require('goto-preview').goto_preview_definition()<CR>
-nnoremap gpi <cmd>lua require('goto-preview').goto_preview_implementation()<CR>
-nnoremap gP <cmd>lua require('goto-preview').close_all_win()<CR>
+"nnoremap gpd <cmd>lua require('goto-preview').goto_preview_definition()<CR>
+"nnoremap gpi <cmd>lua require('goto-preview').goto_preview_implementation()<CR>
+"nnoremap gP <cmd>lua require('goto-preview').close_all_win()<CR>
 " Only set if you have telescope installed
-nnoremap gpr <cmd>lua require('goto-preview').goto_preview_references()<CR>
+"nnoremap gpr <cmd>lua require('goto-preview').goto_preview_references()<CR>
 
 " For the custom menu
 " Map <leader>m to open default menu.
-noremap <silent> <leader>m :ConMenu<CR>
+"noremap <silent> <leader>m :ConMenu<CR>
 
 
 " Use ,c to copy to the macos clipboard
 noremap <leader>c "+y<CR>gv
 
- 
+" Map legendary
+noremap <silent> <leader>e :Legendary<CR>
+
 " If possible, we'd like to have mouse support
 if has("mouse")
    set mouse=a

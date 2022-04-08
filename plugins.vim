@@ -132,6 +132,9 @@ Plug 'TimUntersberger/neogit'
 " Support custom menus
 Plug 'meznaric/conmenu'
 
+" Add diagnostics etc to quickfix list
+Plug 'folke/trouble.nvim'
+
 " VSCode like renaming UI
 " doesn't work
 " Plug 'filipdutescu/renamer.nvim', { 'branch': 'master' }
