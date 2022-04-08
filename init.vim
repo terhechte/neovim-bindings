@@ -112,27 +112,22 @@ luafile ~/.config/nvim/lua_init.lua
 " Try outsave
 let g:rustfmt_autosave = 1
 
-" Move somewhere, document
-"nnoremap gpd <cmd>lua require('goto-preview').goto_preview_definition()<CR>
-"nnoremap gpi <cmd>lua require('goto-preview').goto_preview_implementation()<CR>
-"nnoremap gP <cmd>lua require('goto-preview').close_all_win()<CR>
-" Only set if you have telescope installed
-"nnoremap gpr <cmd>lua require('goto-preview').goto_preview_references()<CR>
-
-" For the custom menu
-" Map <leader>m to open default menu.
-"noremap <silent> <leader>m :ConMenu<CR>
-
-
 " Use ,c to copy to the macos clipboard
 noremap <leader>c "+y<CR>gv
 
 " Map legendary
 noremap <silent> <leader>e :Legendary<CR>
 
-nnoremap <silent> gd    <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap gd <cmd>lua vim.lsp.buf.definition()<CR>
+
+"noremap <leader>c "+y<CR>gv
 
 " If possible, we'd like to have mouse support
 if has("mouse")
    set mouse=a
  endif
+
+ luafile ~/.config/nvim/playground.lua
+
+vmap <leader>fi :lua make_selection()<CR>
+vmap gd :lua vim.lsp.buf.definition()<CR>

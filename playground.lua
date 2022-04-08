@@ -9,8 +9,9 @@ local function visual_selection_range()
 end
 
 function make_selection()
-  --local a, b, c, d = visual_selection_range()
-  --print(a, b, c, d)
-  vim.cmd('execute "normal! \"+y"')
+  local a, b, c, d = visual_selection_range()
+
+  local content = vim.api.nvim_buf_get_text(0, a, b, c, d, {})
+  require("telescope.builtin").grep_string({search=content[0]})
 end
 

@@ -8,8 +8,8 @@ require('legendary').setup({
     -- Legendary itself is mapped to `<leader>e`
     -- copy to macos clipboard itself is mapped to `<leader>c`
     -- close buffer is mapped to <leader>q
-    -- rename file is mapped to <leader>rn ??
     -- get github link for current location file is mapped to <leader>gy
+    -- ,fi = search for the currently selected text
     { '<leader>g', ':Neogit<CR>', description = 'Open Neogit', opts = {} },
     { '<leader>s', ':wa<CR>', description = 'Write all buffers', opts = {} },
     { '<leader>f', vim.lsp.buf.formatting_sync, description = 'Format buffer with LSP' },
@@ -21,6 +21,9 @@ require('legendary').setup({
     { '<leader>fg', ':Telescope live_grep<CR>', description = 'Grep Files' },
     { '<leader>fb', ':Telescope buffers<CR>', description = 'Search Buffers' },
     { '<leader>fc', ':Telescope commands<CR>', description = 'Search commands' },
+    { '<leader>fw', ':Telescope lsp_workspace_symbols<CR>', description = 'Search workspace symbols' },
+    { '<leader>fs', ':lua make_selection()<CR>', description = 'Search selection' },
+    { '<leader>fg', ':Telescope commits<CR>', description = 'Search git commits' },
     { '<leader>flr', ':lua vim.lsp.buf.references()<CR>', description = 'Search references' },
     { '<leader>fli', ':lua vim.lsp.buf.implementation()<CR>', description = 'Go to implementation' },
     { '<leader>fld', ':lua vim.lsp.buf.definition()<CR>', description = 'Go to definition' },
@@ -28,6 +31,7 @@ require('legendary').setup({
     { '<leader>fhc', ':Telescope command_history<CR>', description = 'Search command history' },
     { '<leader>fhs', ':Telescope search_history<CR>', description = 'Search search history' },
     { '<leader>fs', ':Telescope<CR>', description = 'Search Telescope' },
+    { '<leader>ff', ':Telescope files<CR>', description = 'Search Files in Git' },
     { '<leader>ft', ':TodoTelescope<CR>', description = 'Find Todos in Project' },
     { '<leader>ca', ':CodeActionMenu<CR>', description = 'Show Code Actions' },
     { '<leader>tt', ':NvimTreeToggle<CR>', description = 'Toggle File Tree' },
@@ -41,9 +45,10 @@ require('legendary').setup({
     { '<leader>rn', ':RustCodeAction<CR>', description = 'Rust Code Actions' },
     { '<leader>rr', ':require("rust-tools.runnables").runnables()<CR>', description = 'Cargo Runnables' },
     { '<leader>xq', ':cclose<CR>', description = 'Close quickfix list' },
-    --{ '<leader>gn', require("cosmic-ui").rename(), description = 'Rename' },
-    --{ '<leader>ga', require("cosmic-ui").code_actions(), description = ' Code Actions' },
-    --{ '<leader>gb', require("cosmic-ui").range_code_actions(), description = 'Range Code Actions' },
+    { '<leader>gn', ':lua require("cosmic-ui").rename()<CR>', description = 'Rename' },
+    { '<leader>ga', ':lua require("cosmic-ui").code_actions()<CR>', description = ' Code Actions' },
+    { '<leader>gb', ':lua require("cosmic-ui").range_code_actions()<CR>', description = 'Range Code Actions' },
+    { '<leader>gy', ':lua require"gitlinker".get_buf_range_url("n")<CR>', description = 'Copy Github link to line' },
   },
   -- Initial commands to bind
   commands = {
