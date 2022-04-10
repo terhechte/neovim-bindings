@@ -98,7 +98,8 @@ set expandtab
 autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()
 
 " Guifont
-set guifont=Lekton\ Nerd\ Font\ Mono:h12
+" set guifont=Lekton\ Nerd\ Font\ Mono:h15
+set guifont=Iosevka\ Nerd\ Font\ Mono:h15
 
 
 " colorscheme aurora
@@ -118,7 +119,7 @@ noremap <leader>c "+y<CR>gv
 " Map legendary
 noremap <silent> <leader>e :Legendary<CR>
 
-nnoremap gd <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> <leader>gd :lua vim.lsp.buf.definition()<CR>
 
 "noremap <leader>c "+y<CR>gv
 
@@ -131,3 +132,4 @@ if has("mouse")
 
 vmap <leader>fi :lua make_selection()<CR>
 vmap gd :lua vim.lsp.buf.definition()<CR>
+

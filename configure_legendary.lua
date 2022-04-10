@@ -12,7 +12,6 @@ require('legendary').setup({
     -- ,fi = search for the currently selected text
     { '<leader>g', ':Neogit<CR>', description = 'Open Neogit', opts = {} },
     { '<leader>s', ':wa<CR>', description = 'Write all buffers', opts = {} },
-    { '<leader>f', vim.lsp.buf.formatting_sync, description = 'Format buffer with LSP' },
     { '<leader>m', ':ConMenu<CR>', description = 'Show the option menu' },
     { '<leader>pd', require('goto-preview').goto_preview_definition(), description = 'Preview Definition' },
     { '<leader>pr', require('goto-preview').goto_preview_references(), description = 'Preview References' },
@@ -35,7 +34,8 @@ require('legendary').setup({
     { '<leader>ft', ':TodoTelescope<CR>', description = 'Find Todos in Project' },
     { '<leader>ca', ':CodeActionMenu<CR>', description = 'Show Code Actions' },
     { '<leader>tt', ':NvimTreeToggle<CR>', description = 'Toggle File Tree' },
-    { '<leader>tt', ':NvimTreeFindFile<CR>', description = 'Find in File Tree' },
+    { '<leader>tf', ':NvimTreeFindFile<CR>', description = 'Find in File Tree' },
+    { '<leader>ts', ':SymbolsOutline<CR>', description = 'Toggle Symbols Outline' },
     { '<leader>xt', ':ToggleTerm<CR>', description = 'Toggle Terminal at bottom' },
     { '<leader>x2', ':ToggleTerm 2<CR>', description = 'Toggle second Terminal at bottom' },
     { '<leader>x3', ':ToggleTerm 3<CR>', description = 'Toggle third Terminal at bottom' },

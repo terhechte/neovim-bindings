@@ -178,14 +178,16 @@ https://github.com/mrjones2014/legendary.nvim
 # Open Questions
 
 - [ ] how do I see all the errors in the project
-- [ ] how do I rename
-- [ ] see all references
-- [ ] search for item
-- [ ] see implementations
+- [x] how do I rename
+- [x] see all references
+- [x] search for item
+- [x] see implementations
 - [x] format on save
-- [ ] list of all symbols, properly sorted
+- [x] list of all symbols, properly sorted
 - [ ] cargo integration
 - [ ] toml integration
 - [ ] docs.rs integration
-- [ ] ctrl e / ctrl a after a completion pop is open
+- [x] ctrl e / ctrl a after a completion pop is open
 - [x] do a git grep / rg / telescope for the currently selected text
+- [ ] get docs for hover / selection
+- [ ] learn all the leader commands and maybe rename some

@@ -126,6 +126,9 @@ Plug 'akinsho/toggleterm.nvim'
 " Generate git links
 Plug 'ruifm/gitlinker.nvim'
 
+" Symbol outline
+Plug 'simrat39/symbols-outline.nvim'
+
 " Magit! ;)
 Plug 'TimUntersberger/neogit'
 

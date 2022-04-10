@@ -25,6 +25,7 @@ let g:conmenu#default_menu = [
   \['  Commands', ':Telescope commands'],
   \['  Marks', ':Telescope marks' ],
   \['﬍  Todos', ':TodoTelescope'],
+  \['  Toggle Symbols', ':SymbolsOutline'],
   \['﬘  Find in File Tree', ':NvimTreeFindFile'],
   \['  Find Selection', ':lua make_selection()'],
   \]],
